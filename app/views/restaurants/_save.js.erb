@@ -1,0 +1,9 @@
+$("ul.errors").html("")
+<% if @restaurant.errors.any? %>
+  <% @restaurant.errors.full_messages.each do |message| %>
+    $("ul.errors").append($("<li />").html("<%= message.html_safe %>"))
+  <% end %>
+<% else %>
+  $(".restaurant-index").html("<%= escape_javascript(render 'index') %>")
+  $("#restaurant-modal").modal("hide")
+<% end %>
