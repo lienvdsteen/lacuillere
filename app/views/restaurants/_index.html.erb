@@ -1,7 +1,15 @@
 <% @restaurants.each do |restaurant| %>
-  <div class="col-sm-6 col-sm-offset-3">
-    <%= restaurant.name %>
-    <%= restaurant.category %>
-    <%= restaurant.address %>
+  <div class="col-xs-18 col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <img src="http://placehold.it/500x250/EEE">
+
+      <div class="caption">
+        <h4> <%= restaurant.name %> </h4>
+        <p><%= restaurant.category %></p>
+        <p><%= restaurant.address %></p>
+        <%= link_to "Add a review", new_restaurant_review_path(restaurant), class: "btn btn-warning", remote: true %>
+      </div>
+    </div>
   </div>
+
 <% end %>
