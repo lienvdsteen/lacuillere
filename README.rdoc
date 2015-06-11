@@ -1,3 +1,2 @@
 == README
 
-Solution for Le Wagon bootcamp Rails Day 3
