@@ -7,6 +7,12 @@
         <h4> <%= restaurant.name %> </h4>
         <p><%= restaurant.category %></p>
         <p><%= restaurant.address %></p>
+        <div class="rating">
+          <p>
+            Average Rating:
+            <%= restaurant.reviews.map(&:rating).sum / restaurant.reviews.count %>
+          </p>
+        </div>
         <%= link_to "Add a review", new_restaurant_review_path(restaurant), class: "btn btn-warning", remote: true %>
       </div>
     </div>
