@@ -23,5 +23,5 @@ restaurants_attributes.each { |params| Restaurant.create!(params) }
 
 restaurants = Restaurant.all
 restaurants.each do |restaurant|
-  10.times {restaurant.reviews.create(content: "Lorem Ipsum For Review", rating: rand(0..5))}
+  5.times {restaurant.reviews.create(content: "Lorem Ipsum For Review", rating: rand(0..5))}
 end
